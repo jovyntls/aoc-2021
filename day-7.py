@@ -11,16 +11,14 @@ def triangle(n):
     return MEMO[n]
 
 def part_1():
-    print("--- PART 1 ---")
     sums = [sum([abs(m-n) for m in numbers]) for n in numbers]
-    print(min(sums))
+    return min(sums)
 
 def part_2():
-    print("--- PART 2 ---")
     sums = [sum([triangle(abs(m-n)) for m in numbers]) for n in range(min(numbers), max(numbers) + 1)]
-    print(min(sums))
+    return min(sums)
 
 
-part_1()
-part_2()
+print("PART 1: ", print(part_1()))
+print("PART 2: ", print(part_2()))
 

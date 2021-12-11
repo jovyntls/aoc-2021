@@ -3,21 +3,14 @@ with open('input.txt') as f:
     lines = [(x, int(y)) for x, y in lines]
 
 def part_1():
-    print("--- PART 1 ---")
-
     depth, horizontal = 0, 0
     for inst, magnitude in lines:
       if inst == 'down': depth += magnitude
       elif inst == 'up': depth -= magnitude
       elif inst == 'forward': horizontal += magnitude
-      else: print("???")
-
-    print('ans: ', depth * horizontal)
-
+    return depth * horizontal
 
 def part_2():
-    print("--- PART 2 ---")
-
     depth = horizontal = aim = 0
     for inst, magnitude in lines:
       if inst == 'down': aim += magnitude
@@ -25,12 +18,9 @@ def part_2():
       elif inst == 'forward':
         horizontal += magnitude
         depth += aim * magnitude
-      else: print("???")
-
-    print('ans: ', depth * horizontal)
+    return depth * horizontal
 
 
-
-part_1()
-part_2()
+print("PART 1: ", part_1())
+print("PART 2: ", part_2())
 

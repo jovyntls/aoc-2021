@@ -39,16 +39,13 @@ with open('input.txt') as f:
 
 
 def part_1():
-    print("--- PART 1 ---")
     for num in called_numbers:
         for board in boards:
             board.call_number(num)
             if board.is_won():
-                print(int(num) * board.sum_of_uncalled())
-                return
+                return int(num) * board.sum_of_uncalled()
 
 def part_2():
-    print("--- PART 2 ---")
     current_boards = boards
     for num in called_numbers:
         unwon_boards = []
@@ -57,9 +54,9 @@ def part_2():
             if board.is_won(): last_won = int(num) * board.sum_of_uncalled()
             else: unwon_boards.append(board)
         current_boards = unwon_boards
-    print(last_won)
+    return last_won
 
 
-part_1()
-part_2()
+print("PART 1: ", print(part_1()))
+print("PART 2: ", print(part_2()))
 

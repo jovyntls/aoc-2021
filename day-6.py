@@ -15,13 +15,11 @@ def count_fish(days):
     return total
 
 def part_1():
-    print("--- PART 1 ---")
-    print(count_fish(80))
+    return count_fish(80)
 
 def part_2():
-    print("--- PART 2 ---")
-    print(count_fish(256))
+    return count_fish(256)
 
-part_1()
-part_2()
+print("PART 1: ", print(part_1()))
+print("PART 2: ", print(part_2()))
 

@@ -7,6 +7,7 @@ match = dict(zip(opening, closing))
 
 corrupted = set()
 
+
 def part_1():
     points = { ')': 3, ']': 57, '}': 1197, '>': 25137 }
     score = 0
@@ -19,7 +20,6 @@ def part_1():
                 corrupted.add(line)
                 break
     return score
-
 
 def part_2():
     points = { ')': 1, ']': 2, '}': 3, '>': 4 }
@@ -40,8 +40,6 @@ def part_2():
     return sorted(scores)[len(scores)//2]
 
 
-print("--- PART 1 ---")
-print(part_1())
-print("--- PART 2 ---")
-print(part_2())
+print("PART 1: ", print(part_1()))
+print("PART 2: ", print(part_2()))
 
