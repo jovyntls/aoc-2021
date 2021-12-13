@@ -19,6 +19,6 @@ def part_2():
     return min(sums)
 
 
-print("PART 1: ", print(part_1()))
-print("PART 2: ", print(part_2()))
+print("PART 1: ", part_1())
+print("PART 2: ", part_2())
 
